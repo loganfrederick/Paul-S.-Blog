@@ -3,26 +3,43 @@
   <head>
     <meta charset="utf-8" />
     <title>#{@title}</title>
+    <link href='http://fonts.googleapis.com/css?family=Galdeano' rel='stylesheet' type='text/css'>
     #{css('reset')}
     #{css('layout')}
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="http://ui.jquery.com/latest/ui/effects.core.js"></script>
+    #{js('layout')}
   </head>
   <body>
     <div id="header-container">
       <div class="component">
 	<ul id="links">
-	  <li>Blog</li><br/>
-	  <li style="backfground-color: orange;">Facebook</li><br/>
-	  <li style="backgfround-color: green;">Twitter</li><br/>
-	  <li style="backgrfound-color: red;">LinkedIn</li>
+	  <li><a href="/">Blog</a></li>
+	  <li><a href="/paul">Who is Paul S. Chun?</a></li>
+	  <li><a target="_blank" href="http://www.facebook.com/paulschun">Facebook</a></li>
+	  <li><a target="_blank" href="http://www.twitter.com/sixofhearts">Twitter</a></li>
+	  <li><a target="_blank" href="http://www.linkedin.com/in/paulschun">LinkedIn</a></li>
+	  <li><a target="_blank" href="http://github.com/sixofhearts">GitHub</a></li>
 	</ul>
       </div>
-      <div class="component" style="width: 34%;">
+      <div class="middle-component">
 	<h1 id="logo"><a href="/">Sixofhearts</a></h1>
+      </div>
+      <div class="component">
+	<div id="what-is-this-page">
+	  <h2>Paul S. Chun</h2><br/>
+	  <h3>Oregon MBA '13</h3><br/>
+	  <h3>Rubyist</h3><br/>
+	  <h3>Overeater</h3><br/>
+	  <h3>General Dweeb</h3>
+	</div>
       </div>
       <div style="clear: both;"></div>
     </div>
-
     <div id="container">
+      #{@content}
     </div>
   </body>
 </html>

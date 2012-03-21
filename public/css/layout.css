@@ -1,5 +1,7 @@
 body {
     background-color: #FFF;
+    font-family: "Galdeano", "Arial", "Sans-Serif";
+    font-size: 14pt;
 }
 
 #header-container {
@@ -13,26 +15,29 @@ body {
     color: #FFF;
     font-weight: bold;
     font-size: 24pt;
-    font-family: "arial narrow";
-    letter-spacing: -1px;
+    letter-spacing: -2px;
+    font-family: "Arial";
     list-style-type: none;
 }
 
 #links li {
-    display: inline;
-    background-color: #900;
-    padding: 10px;
-    line-height: 2em;
+   line-height: 2em;
 }
 
-#links li:hover {
-    color: #FFF;
-    cursor: pointer;
+#links li a {
+   background-color: #600;
+   padding: 10px;
+   text-decoration: none;
+   color: #FFF;
 }
 
-#header-container .component {
+#header-container .component, #header-container .middle-component {
     width: 33%;
     float: left;
+}
+
+#header-container .middle-component {
+    width: 34%;
 }
 
 h1#logo a {
@@ -42,4 +47,28 @@ h1#logo a {
     margin: 0 auto;
     background-image: url('/images/logo.png');
     text-indent: -9999px;
+}
+
+#container {
+    width: 920px;
+    margin: 0 auto;
+}
+
+
+#what-is-this-page {
+    text-transform: uppercase;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 24pt;
+    letter-spacing: -2px;
+    font-family: "Arial";
+    list-style-type: none;
+    text-align: right;
+}
+
+#what-is-this-page h2, #what-is-this-page h3 {
+    display: inline;
+    padding: 10px;
+    line-height: 2em;
+    background-color: #333;
 }
