@@ -1,81 +1,45 @@
-/**
- * Stylesheet used for the layout of most elements.
- *
- * @author Yorick Peterse
- * @link   http://yorickpeterse.com/
- */
-#container
-{
-    margin:  20px auto;
-    width:   940px;
+body {
+    background-color: #FFF;
 }
 
-#content
-{
-    background:    #fff;
-    border:        1px solid #ddd;
-    padding:       20px;
-    width:         898px;
+#header-container {
+    background-color: #B1946C;
+    padding: 50px 0;
+    border-bottom: 10px solid #CA8;
 }
 
-/* Top part of the website, contains the title and the navigation menu */
-#top
-{
-    background:    #E33F1E;
-    height:        70px;
-    margin-bottom: 20px;
-    padding:       0px 10px;
+#links {
+    text-transform: uppercase;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 24pt;
+    font-family: "arial narrow";
+    letter-spacing: -1px;
+    list-style-type: none;
 }
 
-    #top header h1
-    {
-        color:       #fff;
-        font-size:   38px;
-        margin:      10px 0px 0px 0px;
-        padding:     0px;
-    }
-
-    #top nav ul
-    {
-        float:        right;
-        margin-right: 15px;
-    }
-
-        #top nav ul li
-        {
-            float:           left;
-            font-size:       16px;
-            list-style-type: none;
-            margin-right:    10px;
-        }
-
-        #top nav ul li:last-child
-        {
-            margin-right: 0px;
-        }
-
-            #top nav ul li a
-            {
-                color:           #fff;
-                display:         block;
-                height:          45px;
-                padding:         25px 10px 0px 10px;
-                text-decoration: none;
-            }
-
-            #top nav ul li a:hover
-            {
-                background: #D43919;
-            }
-
-/* Footer at the bottom of the page */
-#footer
-{
-    text-align: center;
+#links li {
+    display: inline;
+    background-color: #900;
+    padding: 10px;
+    line-height: 2em;
 }
 
-    #footer p
-    {
-        font-size:     13px;
-        margin-bottom: 10px;
-    }
+#links li:hover {
+    color: #FFF;
+    cursor: pointer;
+}
+
+#header-container .component {
+    width: 33%;
+    float: left;
+}
+
+h1#logo a {
+    display: block;
+    width: 409px;
+    height: 409px;
+    margin: 0 auto;
+    background-image: url('/images/logo.png');
+    text-indent: -9999px;
+}

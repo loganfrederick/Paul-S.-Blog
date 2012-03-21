@@ -1,57 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
+  <head>
+    <meta charset="utf-8" />
+    <title>#{@title}</title>
+    #{css('reset')}
+    #{css('layout')}
+  </head>
+  <body>
+    <div id="header-container">
+      <div class="component">
+	<ul id="links">
+	  <li>Blog</li><br/>
+	  <li style="backfground-color: orange;">Facebook</li><br/>
+	  <li style="backgfround-color: green;">Twitter</li><br/>
+	  <li style="backgrfound-color: red;">LinkedIn</li>
+	</ul>
+      </div>
+      <div class="component" style="width: 34%;">
+	<h1 id="logo"><a href="/">Sixofhearts</a></h1>
+      </div>
+      <div style="clear: both;"></div>
+    </div>
 
-        <title>#{@title}</title>
-
-        #{css('reset')}
-        #{css('grid')}
-        #{css('layout')}
-        #{css('text')}
-    </head>
-    <body>
-        <div class="container">
-            <div id="container" class="row">
-                <!-- Top part, contains the navigation menu -->
-                <div id="top" class="grid_12">
-                    <header class="grid_6">
-                        <h1>#{@title}</h1>
-                    </header> 
-
-                    <nav class="grid_6 last">
-                        <ul class="clearfix">
-                            <li>
-                                <a href="http://ramaze.net/">Website</a>
-                            </li>
-                            <li>
-                                <a href="http://ramaze.net/documentation/index.html">
-                                    Documentation
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://groups.google.com/forum/#!forum/ramaze">
-                                    Mailing List
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <div id="content" class="grid_12">
-                    #{@content}
-                </div>
-            </div>
-
-            <footer id="footer">
-                <p>
-                    Ramaze is free software and is licensed under the Ruby license.<br />
-                    All textual content is licensed under a 
-                    <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
-                        Creative Commons license.
-                    </a>
-                </p>
-            </footer>
-        </div>
-    </body>
+    <div id="container">
+    </div>
+  </body>
 </html>
