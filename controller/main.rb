@@ -14,9 +14,11 @@ class MainController < Controller
     raise "Bad Path ID" unless @post
 
     @title = "Sixofhearts = Paul S. Chun &gt; " + @post.title
+    @fb_desc = @post.first_paragraph.gsub(/<[^>]*>/, "")
   end
 
   def all_posts
+    @title = "Sixofhearts = Paul S. Chun &gt; All Posts"
     @recent_posts = BlogPost.order(:created_at.desc)
   end
 
