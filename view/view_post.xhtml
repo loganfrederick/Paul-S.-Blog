@@ -5,6 +5,6 @@
   #{@post.body}
 
   <div class="comments">
-    <fb:comments href="http://sixofhearts.us/#{@post.path_id}" num_posts="2" width="580" colorscheme="dark"></fb:comments>
+    <fb:comments href="http://#{request.host_with_port}/#{@post.path_id}" num_posts="2" width="580" colorscheme="dark"></fb:comments>
   </div>
 </div>
