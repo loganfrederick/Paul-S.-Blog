@@ -1,5 +1,6 @@
 <div class="section">
   <h4>#{@post.title}</h4>
+  <h6>Posted #{time_ago @post.created_at}</h6>
 
   #{@post.body}
 
@@ -7,4 +8,3 @@
     <fb:comments href="http://sixofhearts.us/#{@post.path_id}" num_posts="2" width="600" colorscheme="dark"></fb:comments>
   </div>
 </div>
-

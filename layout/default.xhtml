@@ -34,8 +34,8 @@
 	  <li class="first-level">
 	    <a href="/all_posts">Recent Posts</a>
 	    <ul class="second-level">
-	      <?r for post in BlogPost.limit(4) ?>
-	        <li><a href="/#{post.path_id}">#{post.title}</a></li>
+	      <?r for post in BlogPost.order(:created_at.desc).limit(3) ?>
+	        <li><a href="/#{post.path_id}">#{post.title[0..30]}#{"..." if post.title.length > 30} <small>(#{time_ago post.created_at})</small></a></li>
 	      <?r end ?>
 	      <li><a href="/all_posts">More...</a></li>
 	    </ul>

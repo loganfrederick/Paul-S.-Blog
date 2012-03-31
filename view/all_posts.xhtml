@@ -1,0 +1,10 @@
+<div class="section">
+  <h4>All Posts</h4>
+  <ul>
+    <?r for post in @recent_posts ?>
+      <li>
+	<h5><a href="/#{post.path_id}">#{post.title}</a> <small>Posted #{time_ago post.created_at}</small></h5>
+      </li>
+    <?r end ?>
+  </ul>
+</div>

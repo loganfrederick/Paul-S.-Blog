@@ -7,6 +7,9 @@ class BlogPost < Sequel::Model
       varchar     :title
       text        :body
       varchar     :path_id
+      timestamp   :created_at
+      timestamp   :updated_at
+      boolean     :private
     end
   end
 
@@ -22,8 +25,18 @@ class BlogPost < Sequel::Model
     validates_format    /[a-z_\d]+/, :path_id
   end
 
+  def before_save
+    self.set_timestamps
+    super
+  end
+
   def assign_path_id
     self.path_id = self.title.strip.downcase.gsub(/\ +/, " ").gsub(" ", "_").gsub(/[^a-z_\d]/, "")
+  end
+
+  def set_timestamps
+    self.created_at = Time.now unless self.created_at
+    self.updated_at = Time.now
   end
 
   def first_paragraph

@@ -1,6 +1,7 @@
 <div class="section" style="background-image: url('/images/paul.jpg'); color: #000; height: 453px;">
   <div style="background-color: #000611; width: 400px; color: #FFF; border-radius: 10px; padding: 10px;">
-    Hi there. I'm Paul. I'm working on an MBA at the University of Oregon and like to code and eat.
+    <h4>Hi there. My name is Paul.</h4>
+    I'm working on an MBA at the University of Oregon and I like to code and eat. That's about it.
   </div>
   <div style="background-color: #000611; width: 400px; color: #FFF; border-radius: 10px; padding: 10px; margin-top: 10px;">
     If you'd like to contact me, feel free to do so via the social networks in the "Add Me" link above.
@@ -11,7 +12,7 @@
   <div class="section">
     <h3><a href="/#{post.path_id}">#{post.title}</a></h3>
     <p>
-      Posted 12 minutes ago<br/>
+      Posted #{time_ago post.created_at}<br/>
     </p>
     #{post.first_paragraph}
     <p>
