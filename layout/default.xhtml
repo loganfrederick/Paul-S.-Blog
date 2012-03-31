@@ -14,32 +14,38 @@
   </head>
   <body>
     <div id="header-container">
-      <div class="component">
+      <div id="header">
+	<div class="middle-component">
+	  <h1 id="logo"><a href="/">Sixofhearts</a></h1>
+	</div>
 	<ul id="links">
-	  <li><a href="/">Blog</a></li>
-	  <li><a href="/paul">Who is Paul S. Chun?</a></li>
-	  <li><a target="_blank" href="http://www.facebook.com/paulschun">Facebook</a></li>
-	  <li><a target="_blank" href="http://www.twitter.com/sixofhearts">Twitter</a></li>
-	  <li><a target="_blank" href="http://www.linkedin.com/in/paulschun">LinkedIn</a></li>
-	  <li><a target="_blank" href="http://github.com/sixofhearts">GitHub</a></li>
+	  <li class="first-level"><a href="/paul">About</a></li>
+	  <li class="first-level">
+	    <a href="#">Contact</a>
+	    <ul class="second-level">
+	      <li><a target="_blank" href="http://www.facebook.com/paulschun">Facebook</a></li>
+	      <li><a target="_blank" href="http://www.twitter.com/sixofhearts">Twitter</a></li>
+	      <li><a target="_blank" href="http://www.linkedin.com/in/paulschun">LinkedIn</a></li>
+	      <li><a target="_blank" href="http://github.com/sixofhearts">GitHub</a></li>
+	      <li><a target="_blank" href="http://github.com/sixofhearts">Email</a></li>
+	    </ul>
+	  </li>
+	  <li class="first-level">
+	    <a href="#">Recent Posts</a>
+	    <ul class="second-level">
+	      <li><a target="_blank" href="http://www.facebook.com/paulschun">Facebook</a></li>
+	      <li><a target="_blank" href="http://www.twitter.com/sixofhearts">Twitter</a></li>
+	      <li><a target="_blank" href="http://www.linkedin.com/in/paulschun">LinkedIn</a></li>
+	      <li><a target="_blank" href="http://github.com/sixofhearts">GitHub</a></li>
+	      <li><a target="_blank" href="http://github.com/sixofhearts">Email</a></li>
+	    </ul>
+	  </li>
 	</ul>
       </div>
-      <div class="middle-component">
-	<h1 id="logo"><a href="/">Sixofhearts</a></h1>
-      </div>
-      <div class="component">
-	<div id="what-is-this-page">
-	  <h2>Paul S. Chun</h2><br/>
-	  <h3>Oregon MBA '13</h3><br/>
-	  <h3>Rubyist</h3><br/>
-	  <h3>Overeater</h3><br/>
-	  <h3>General Dweeb</h3>
-	</div>
-      </div>
-      <div style="clear: both;"></div>
     </div>
-    <div id="container">
-      #{@content}
-    </div>
-  </body>
+</div>
+<div id="container">
+  #{@content}
+</div>
+</body>
 </html>

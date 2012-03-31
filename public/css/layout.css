@@ -1,74 +1,72 @@
 body {
-    background-color: #FFF;
-    font-family: "Galdeano", "Arial", "Sans-Serif";
-    font-size: 14pt;
+    background-color: #B1946C;
+    font-family: "Galdeano", "Arial", "sans-serif";
 }
 
 #header-container {
-    background-color: #B1946C;
-    padding: 50px 0;
-    border-bottom: 10px solid #CA8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 39px;
+    border-bottom: 1px solid #400;
+    background-color: #600;
 }
 
-#links {
-    text-transform: uppercase;
-    color: #FFF;
-    font-weight: bold;
-    font-size: 24pt;
-    letter-spacing: -2px;
-    font-family: "Arial";
-    list-style-type: none;
+* html #header-container {
+    position: absolute;
 }
 
-#links li {
-   line-height: 2em;
-}
-
-#links li a {
-   background-color: #600;
-   padding: 10px;
-   text-decoration: none;
-   color: #FFF;
-}
-
-#header-container .component, #header-container .middle-component {
-    width: 33%;
-    float: left;
-}
-
-#header-container .middle-component {
-    width: 34%;
-}
-
-h1#logo a {
-    display: block;
-    width: 409px;
-    height: 409px;
+#header {
+    width: 910px;
     margin: 0 auto;
-    background-image: url('/images/logo.png');
-    text-indent: -9999px;
+    position: relative;
 }
 
 #container {
-    width: 920px;
-    margin: 0 auto;
+    width: 910px;
+    margin: 40px auto 0 auto;
+    border: 1px solid #333;
+    border-top: 0;
+    background-color: #FFF;
 }
 
+#logo a {
+    float: left;
+    text-indent: -9999px;
+    display: block;
+    width: 100px;
+}
 
-#what-is-this-page {
-    text-transform: uppercase;
-    color: #FFF;
+#links .first-level {
+    font-size: 18pt;
     font-weight: bold;
-    font-size: 24pt;
-    letter-spacing: -2px;
-    font-family: "Arial";
-    list-style-type: none;
-    text-align: right;
+    font-family: "Arial", "sans-serif";
+    letter-spacing: -1px;
+    margin-left: 10px;
+    float: left;
+    text-transform: uppercase;
+    position: relative;
 }
 
-#what-is-this-page h2, #what-is-this-page h3 {
-    display: inline;
-    padding: 10px;
-    line-height: 2em;
-    background-color: #333;
+#links .first-level a {
+    color: #FFF;
+    text-decoration: none;    
+    padding: 5px 10px 0 10px;
+    height: 34px;
+    display: block;
+}
+
+#links .second-level {
+    position: absolute;
+    top: 39px;
+    display: none;
+    height: 200px;
+    width: 300px;
+    background-color: #600;
+}
+
+#links .second-level a {
+    display: block;
+    float: none;
 }

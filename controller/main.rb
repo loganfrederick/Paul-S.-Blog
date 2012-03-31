@@ -11,7 +11,7 @@
 class MainController < Controller
   # the index action is called automatically when no other action is specified
   def index
-    @title = "Sixofhearts &#124; Paul S. Chun's Place in the Sun."
+    @title = "Paul S. Chun's Blog - Sixofhearts"
   end
 
   # the string returned at the end of the function is used as the html body
