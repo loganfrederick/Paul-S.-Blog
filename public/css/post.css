@@ -2,12 +2,19 @@
     margin-top: 60px;
 }
 
-h4 {
+h4, h5 {
     font-size: 20pt;
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
     font-weight: normal;
+    color: #B44;
+}
+h5 {
+    font-size: 14pt;
+    margin: 20px 0 10px 0;
 }
 
 p {
     margin-bottom: 10px;
+    line-height: 1.5em;
+    color: #CCC;
 }

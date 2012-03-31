@@ -1,17 +1,18 @@
-# Default url mappings are:
-# 
-# * a controller called Main is mapped on the root of the site: /
-# * a controller called Something is mapped on: /something
-# 
-# If you want to override this, add a line like this inside the class:
-#
-#  map '/otherurl'
-#
-# this will force the controller to be mounted on: /otherurl.
+Ramaze::Route[/\/paulissexy([a-z0-9_\/]*)/] = "/paulissexy%s"
+Ramaze::Route[/\/([a-z0-9_]+)/] = '/view_post/%s'
+
 class MainController < Controller
   # the index action is called automatically when no other action is specified
   def index
-    @title = "Paul S. Chun's Blog - Sixofhearts"
+    @title = "Sixofhearts = Paul S. Chun"
+    @posts = BlogPost.limit(3)
+  end
+
+  def view_post(path_id)
+    @post = BlogPost.first(:path_id => path_id)
+    raise "Bad Path ID" unless @post
+
+    @title = "Sixofhearts = Paul S. Chun &gt; " + @post.title
   end
 
   # the string returned at the end of the function is used as the html body

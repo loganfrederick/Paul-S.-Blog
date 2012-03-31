@@ -30,25 +30,23 @@
 	  <h1 id="logo"><a href="/">Sixofhearts</a></h1>
 	</div>
 	<ul id="links">
-	  <li class="first-level"><a href="/paul">About</a></li>
+	  <li class="first-level"><a href="/">Home</a></li>
 	  <li class="first-level">
-	    <a href="#">Contact</a>
+	    <a href="/all_posts">Recent Posts</a>
 	    <ul class="second-level">
-	      <li><a target="_blank" href="http://www.facebook.com/paulschun">Facebook</a></li>
-	      <li><a target="_blank" href="http://www.twitter.com/sixofhearts">Twitter</a></li>
-	      <li><a target="_blank" href="http://www.linkedin.com/in/paulschun">LinkedIn</a></li>
-	      <li><a target="_blank" href="http://github.com/sixofhearts">GitHub</a></li>
-	      <li><a target="_blank" href="http://github.com/sixofhearts">Email</a></li>
+	      <?r for post in BlogPost.limit(4) ?>
+	        <li><a href="/#{post.path_id}">#{post.title}</a></li>
+	      <?r end ?>
+	      <li><a href="/all_posts">More...</a></li>
 	    </ul>
 	  </li>
 	  <li class="first-level">
-	    <a href="#">Recent Posts</a>
+	    <a href="#">Add Me</a>
 	    <ul class="second-level">
 	      <li><a target="_blank" href="http://www.facebook.com/paulschun">Facebook</a></li>
 	      <li><a target="_blank" href="http://www.twitter.com/sixofhearts">Twitter</a></li>
 	      <li><a target="_blank" href="http://www.linkedin.com/in/paulschun">LinkedIn</a></li>
 	      <li><a target="_blank" href="http://github.com/sixofhearts">GitHub</a></li>
-	      <li><a target="_blank" href="http://github.com/sixofhearts">Email</a></li>
 	    </ul>
 	  </li>
 	</ul>

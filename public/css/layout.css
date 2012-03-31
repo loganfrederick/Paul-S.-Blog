@@ -1,8 +1,10 @@
 body {
-    background-color: #FFF;
+    /*background-image: url("/images/green-stripes.png");*/
+    background-color: #012;
     font-family: "Average", "Arial", "sans-serif";
     font-size: 13pt;
     color: #111;
+    margin-bottom: 10px;
 }
 
 #header-container {
@@ -11,8 +13,8 @@ body {
     left: 0;
     width: 100%;
     height: 39px;
-    border-bottom: 1px solid #974;
-    background-color: #B1946C;
+    border-bottom: 1px solid #400;
+    background-color: #600;
 }
 
 * html #header-container {
@@ -36,25 +38,29 @@ body {
     float: left;
     text-indent: -9999px;
     display: block;
-    width: 0px;
+    width: 77px;
+    height: 35px;
+    background-image: url("/images/top-left-button.png");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    padding: 2px 10px 0 10px;
+    margin-right: 50px;
 }
 
 #links .first-level {
     font-size: 14pt;
     font-weight: bold;
-    font-family: "Arial", "sans-serif";
     letter-spacing: -1px;
-    margin-left: 10px;
+    margin-left: 20px;
     float: left;
-    text-transform: uppercase;
     position: relative;
 }
 
 #links .first-level a {
     color: #FFF;
     text-decoration: none;
-    padding: 8px 10px 0 10px;
-    height: 31px;
+    padding: 17px 10px 0 10px;
+    height: 22px;
     display: block;
 }
 
@@ -64,17 +70,37 @@ body {
     display: none;
     height: 200px;
     width: 300px;
-    background-color: #B1946C;
+    background-color: #600;
+    font-size: 12pt;
+    letter-spacing: 0;
+    border: 1px solid #400;
+    margin: 0 -1px -1px -1px;
+    border-top: 0;
 }
 
 #links .second-level a {
     display: block;
     float: none;
+    padding: 8px 10px 0 10px;
+    height: 31px;
+    font-weight: normal;
 }
 
 .section {
     border-radius: 10px 10px 10px 10px;
     padding: 15px 20px;
     margin-top: 10px;
-    background-color: #EEF;
+    background-color: #000611;
+    color: #FFF;
+    background-fimage: url("/images/sunburst.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.section a {
+    color: #72afd9;
+}
+
+.section a:hover {
+    color: #aad1ed;
 }

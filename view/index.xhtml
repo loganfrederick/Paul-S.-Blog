@@ -1,10 +1,21 @@
-<div class="section">
-  <h4>Learning Through Error: A Geeky Lesson</h4>
-  <p>Last week, I was probably more sick than I’ve been since high school. I tried to fight it, but eventually realized my body just needed rest, so I forced myself to stay in bed for basically the entire weekend.</p>
-
-  <p>Lying in bed made me find ways to pass time when I couldn’t sleep but was still in bed. One of those ways was to watch sports, which was usually one of either basketball (a sport I’m extremely familiar with) or soccer (a sport I enjoy but don’t know too much about).</p>
-  <div class="comments">
-    <fb:comments href="http://sixofhearts.us" num_posts="2" width="600"></fb:comments>
+<div class="section" style="background-image: url('/images/paul.jpg'); color: #000; height: 453px;">
+  <div style="background-color: #000611; width: 400px; color: #FFF; border-radius: 10px; padding: 10px;">
+    Hi there. I'm Paul. I'm working on an MBA at the University of Oregon and like to code and eat.
+  </div>
+  <div style="background-color: #000611; width: 400px; color: #FFF; border-radius: 10px; padding: 10px; margin-top: 10px;">
+    If you'd like to contact me, feel free to do so via the social networks in the "Add Me" link above.
   </div>
 </div>
 
+<?r for post in @posts ?>
+  <div class="section">
+    <h3><a href="/#{post.path_id}">#{post.title}</a></h3>
+    <p>
+      Posted 12 minutes ago<br/>
+    </p>
+    #{post.first_paragraph}
+    <p>
+      <a href="/#{post.path_id}">Continue Reading &rarr;</a>
+    </p>
+  </div>
+<?r end ?>
