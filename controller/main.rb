@@ -40,7 +40,7 @@ class MainController < Controller
     when 60..60*24 then "#{distance/60} hours ago"
     when 60*24..60*24*30 then "#{distance/60/24} days ago"
     when 60*24*30..60*24*365 then "#{distance/60/24/30} months ago"
-    when 60*24*365..60*24*365*2 then "1 year and #{12 - distance/60/24/30} months ago"
+    when 60*24*365..60*24*365*2 then "1 year and #{(distance/60/24/30) - 12} months ago"
     else "#{distance/60/24} years ago"
     end
   end
