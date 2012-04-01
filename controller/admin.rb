@@ -8,7 +8,7 @@ class Admin < Ramaze::Controller
 
   helper :auth
   def index
-    @posts = BlogPost.all
+    @posts = BlogPost.order(:created_at.desc)
   end
 
   def edit(id)
@@ -34,7 +34,9 @@ class Admin < Ramaze::Controller
     post_id, title, body = request[:post_id, :title, :body]
     @post = BlogPost[post_id]
 
-    @post.update(:title => title, :body => body)
+    @post.title = title
+    @post.body = body
+    @post.save
 
     redirect("/paulissexy")
   end

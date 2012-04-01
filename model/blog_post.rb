@@ -21,22 +21,22 @@ class BlogPost < Sequel::Model
   def validate
     super
     validates_unique    [:path_id, :title]
-    validates_presence  [:title, :body, :path_id]
+    validates_presence  [:title, :path_id]
     validates_format    /[a-z_\d]+/, :path_id
   end
 
   def before_save
-    self.set_timestamps
+    self.updated_at = Time.now
+    super
+  end
+
+  def before_create
+    self.created_at ||= Time.now
     super
   end
 
   def assign_path_id
     self.path_id = self.title.strip.downcase.gsub(/\ +/, " ").gsub(" ", "_").gsub(/[^a-z_\d]/, "")
-  end
-
-  def set_timestamps
-    self.created_at = Time.now unless self.created_at
-    self.updated_at = Time.now
   end
 
   def first_paragraph
