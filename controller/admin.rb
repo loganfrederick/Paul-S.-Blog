@@ -1,5 +1,6 @@
 class Admin < Ramaze::Controller
   map '/paulissexy'
+  set_layout 'admin'
   trait :auth_table => SUPERUSERS
 
   before_all do
