@@ -104,3 +104,15 @@ body {
 .section a:hover {
     color: #aad1ed;
 }
+
+.image {
+    text-align: center;
+    margin: 20px;
+    border: 1px solid #006;
+    background-color: #002;
+    padding: 10px;
+}
+
+.image .caption {
+    font-size: 10pt;
+}
