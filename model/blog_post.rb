@@ -36,7 +36,7 @@ class BlogPost < Sequel::Model
   end
 
   def assign_path_id
-    self.path_id = self.title.strip.downcase.gsub(/\ +/, " ").gsub(" ", "_").gsub(/[^a-z_\d]/, "")
+    self.path_id = self.title.downcase.gsub(/[^a-z_\d]/, " ").strip.gsub(/\ +/, " ").gsub(" ", "_")
   end
 
   def first_paragraph
