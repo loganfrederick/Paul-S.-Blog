@@ -14,7 +14,7 @@ class MainController < Controller
     raise "Bad Path ID" unless @post
 
     @title = "Sixofhearts = Paul S. Chun &gt; " + @post.title
-    @fb_desc = @post.first_paragraph.gsub(/<[^>]*>/, "").gsub('"', "'")
+    @fb_desc = @post.first_paragraph.gsub(/<[^>]*>/, "").gsub('"', "'").strip
   end
 
   def all_posts
